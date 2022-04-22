@@ -21,6 +21,15 @@ export class GitProfileComponent implements OnInit {
       // console.log (this.user);
     });
   }
+  search (){
+    this._githubService.updateUsername(this.username);
+
+    this._githubService.getUser().subscribe(user => {
+        this.user = user;
+        // console.log (this.user);
+      });
+  
+  }
 
   ngOnInit(): void {
   }
