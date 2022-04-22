@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { GitProfileComponent } from './git-profile/git-profile.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { GitprofileService } from './gitprofile.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { GitProfileComponent } from './git-profile/git-profile.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [GitprofileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

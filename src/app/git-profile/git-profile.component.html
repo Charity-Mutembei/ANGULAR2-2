@@ -3,7 +3,7 @@
         <h1 style="color: black; text-align: center; font-weight: 900; font-size: 2cm;">PROFILE PAGE</h1>
         <hr style="width: 1cm; color: black;">
     </div>
-    <div>
+    <!-- <div> -->
         <div class="chat" *ngIf="user">
             <div class="row">
               <div class="col">
@@ -11,12 +11,12 @@
                   <div class="card-header">
                    <h3>{{user.name}}</h3>
                   </div>
-                  <div class="card-body" style="background-color: black; margin-top: 2cm;">
+                  <div class="card-body" style="margin-top: 2cm;">
                       <div class="row">
                           <div class="col">
                             <img class="github-avatar img-thumbnail" src="{{user.avatar_url}}" alt="">
                           </div>
-                          <div class="col" style="margin-top: 1cm;">
+                          <div class="col" style="margin-top: 1cm; background-color: black;">
                             <div class="stats">
                               <span class="button btn-primary" style="border-radius: 1cm; width: 6cm; height: 2cm;" >{{user.pulic_repos}} Public Repositories </span>
                               <span   class="button btn-success" style="border-radius: 1cm; width: 6cm; height: 2cm; margin-left: 3px;">{{user.public_gists}} Public Gists</span>
@@ -39,4 +39,4 @@
         </div>
 
     </div>
-</div>
+<!-- </div> -->
