@@ -1,32 +1,24 @@
 <div class="container" style="margin-top: 2cm; background-color: skyblue">
-    <div>
-        <div class="row">
-            <div class="col">
-                <h2>Repositories</h2>
-            </div>
-            <div class="col">
-                <h4>Profile Page</h4>
-            </div>
-            <div class="col">
-                <h4>Home</h4>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <form class="d-flex container-fluid">
-                  <input class="form-control me-2" type="search" id="name" placeholder="Search by your username on Github Then press Enter on your Device" [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()">
-                  <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                </form>
-            </div>
-        </nav>
-      </div>
+    <div class="container" style="margin-top: 1cm;">
+        <div>
+         <div class="row">
+             <div class="col">
+                 <h1 style="color: white; font-weight: 600;">GitFind</h1>            
+             </div>
+             <div class="col">
+                 <form class="d-flex">
+                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                     <input class="form-control me-2" type="search" id="name" placeholder="Search by your username on Github Then press Enter on your Device" [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()">
+                   </form>
+             </div>
+             <hr style="color: white; size: 1cm; height: 3px;">
+         </div>
+        </div>    
+     </div>
     <div class="repos" *ngIf="user">
-        <div class="card" style="background-color: skyblue;">
-            <div class="card-body" *ngFor="let repo of repos">
-                <div class="card" style="border-radius: 4cm;">
+        <div class="card" style="background-color: white">
+            <div class="card-body" *ngFor="let repo of repos" style="height: fit-content;">
+                <div class="card" id="card" style="border-radius: 4cm; background-color: rgba(135, 206, 235, 0.5);">
                     <div class="row" style="height: 3cm;">
                         <div class="col">
                             <img src="{{ user.avatar_url }}" class="img-fluid rounded-start" alt="..." style="height: 3cm; border-radius: 3cm; border: 2px solid white;">

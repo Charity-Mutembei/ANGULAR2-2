@@ -3,3 +3,15 @@ body{
     background-color: black;
     font-family: 'Poppins', sans-serif;
 }
+#card:hover{
+    transform: scale(1.1);
+}
+.card-body{
+    
+        height: -moz-fit-content;
+        height: fit-content;
+        /* background-color: #8ca0ff; */
+        /* padding: 5px; */
+        /* margin-bottom: 1em; */
+    
+}
