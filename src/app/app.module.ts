@@ -9,13 +9,15 @@ import { GitProfileComponent } from './git-profile/git-profile.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GitprofileService } from './gitprofile.service';
+import { GitRepositoriesComponent } from './git-repositories/git-repositories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LandingPageComponent,
-    GitProfileComponent
+    GitProfileComponent,
+    GitRepositoriesComponent
   ],
   imports: [
     BrowserModule,
