@@ -4,23 +4,17 @@
   <div>
     <div class="row">
       <div class="col">
-        <div>
-          <h1 style="color: black; font-weight: 700">PROFILE PAGE</h1>
-        </div>
-      </div>
+        <h1 style="color: white; font-weight: 600;">Git Profiles</h1>            
+    </div>
+    <div class="col">
+        <form class="d-flex">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <input class="form-control me-2" type="search" id="name" placeholder="Search by your username on Github Then press Enter on your Device" [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()">
+          </form>
+    </div>
     </div>
   </div>
   <hr style="height: 0.5cm; color: black" />
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <form class="d-flex container-fluid">
-              <input class="form-control me-2" type="search" id="name" placeholder="Search by your username on Github Then press Enter on your Device" [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()">
-              <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-            </form>
-        </div>
-    </nav>
-  </div>
   <div style="margin-top: 2cm">
     <div class="chat" *ngIf="user">
       <div class="div">

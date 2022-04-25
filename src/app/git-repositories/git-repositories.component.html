@@ -3,7 +3,7 @@
         <div>
          <div class="row">
              <div class="col">
-                 <h1 style="color: white; font-weight: 600;">GitFind</h1>            
+                 <h1 style="color: white; font-weight: 600;">Git Repositories</h1>            
              </div>
              <div class="col">
                  <form class="d-flex">
@@ -11,7 +11,7 @@
                      <input class="form-control me-2" type="search" id="name" placeholder="Search by your username on Github Then press Enter on your Device" [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()">
                    </form>
              </div>
-             <hr style="color: white; size: 1cm; height: 3px;">
+             <hr style="height: 0.5cm; color: black" />
          </div>
         </div>    
      </div>
@@ -24,16 +24,15 @@
                             <img src="{{ user.avatar_url }}" class="img-fluid rounded-start" alt="..." style="height: 3cm; border-radius: 3cm; border: 2px solid white;">
                         </div>
                         <div class="col">
-                            <div class="card-body">
+                            <div class="card-body" style="margin-top: -2px;">
                                 <h5 class="card-title">
-                                    <h4><a href="{{repo.html}}" target="_blank">{{repo.name}}</a></h4>
+                                    <h4><a href="{{repo.html}}" target="_blank" >{{repo.name}}</a></h4>
                                 </h5>
-                                <p class="card-text">{{repo.description}}</p>
-                                <p class="card-text"><small class="text-muted">
+                                <p class="card-text" style="font-size: small; margin-top: -1px;">{{repo.description}}</p>
+                                <p class="card-text"><small  style="font-size: small; color: black;">
                                         <div class="col">
-                                            <span class="label label-primary">{{repo.watchers}} Watchers</span>
-                                            <span class="label label-primary" style="margin-left: 2cm;">{{repo.forks}}
-                                                Forks</span>
+                                            <span class="label label-primary"><strong>{{repo.watchers}} Watchers</strong></span>
+                                            <span class="label label-primary" style="margin-left: 2cm;"><strong>{{repo.forks}} Forks</strong></span>
                                         </div>
                                     </small></p>
                             </div>
